@@ -1,26 +1,10 @@
 package data;
 
-/**
- * Created by Admin on 22-Feb-16.
- */
-public class User implements IUser {
-    private String email;
-    private String password;
+public interface User {
 
-    public User(UserBuilder userBuilder) {
-        email = userBuilder.email;
-        password = userBuilder.password;
+    String getEmail();
 
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
+    String getPassword();
 
 
 }
-

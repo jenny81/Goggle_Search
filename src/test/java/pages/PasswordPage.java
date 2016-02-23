@@ -1,6 +1,6 @@
 package pages;
 
-import data.IUser;
+import data.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -45,7 +45,7 @@ public class PasswordPage {
         signInButton.click();
     }
 
-    public EmailPage setPassword(IUser user) {
+    public EmailPage setPassword(User user) {
         clickPasswordField();
         clearPasswordField();
         setPasswordField(user.getPassword());

@@ -16,17 +16,10 @@ public class UserRepository {
         return instance;
     }
 
-    public IUser getValidUser() {
+    public User getValidUser() {
         return new UserBuilder()
                 .setEmail(rb.getString("email"))
                 .setPassword(rb.getString("password"))
                 .build();
     }
 }
-//IUser user = new User.Builder()
-
-//return new IUser.Build().setEmail().setPassword().build();
-//        get()
-//                .setEmail(rb.getString("email"))
-//                .setPassword(rb.getString("password"))
-//                .build();

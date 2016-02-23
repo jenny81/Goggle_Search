@@ -1,6 +1,6 @@
 package pages;
 
-import data.IUser;
+import data.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -46,7 +46,7 @@ public class LoginPage {
         //return new PasswordPage(driver);
     }
 
-    public PasswordPage setEmail(IUser user) {
+    public PasswordPage setEmail(User user) {
         clickEmailField();
         clearEmailField();
         setEmailField(user.getEmail());

@@ -1,6 +1,6 @@
 package tests;
 
-import data.IUser;
+import data.User;
 import data.UserRepository;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -51,7 +51,7 @@ public class TestSearchWord {
     }
 
     @Test(priority = 2, dataProvider = "validUser")
-    public void testSearchOfLetters(IUser validUser) throws Exception {
+    public void testSearchOfLetters(User validUser) throws Exception {
         EmailPage emailPage = StartPage.get().load().clickPostBoxLink().setEmail(UserRepository.get().getValidUser())
                 .setPassword(UserRepository.get().getValidUser());
         List dataFromEmailPage = emailPage.parseEmailPage();

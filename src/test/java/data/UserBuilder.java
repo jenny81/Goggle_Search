@@ -17,7 +17,7 @@ public class UserBuilder {
         return this;
     }
 
-    public User build() {
-        return new User(this);
+    public UserImpl build() {
+        return new UserImpl(this);
     }
 }
