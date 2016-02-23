@@ -6,7 +6,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pages.*;
+import pages.EmailPage;
+import pages.ResultPage;
+import pages.StartPage;
 
 import java.util.List;
 
@@ -53,8 +55,6 @@ public class TestSearchWord {
         EmailPage emailPage = StartPage.get().load().clickPostBoxLink().setEmail(UserRepository.get().getValidUser())
                 .setPassword(UserRepository.get().getValidUser());
         List dataFromEmailPage = emailPage.parseEmailPage();
-        System.out.println(dataFromEmailPage);
-
     }
 
 }

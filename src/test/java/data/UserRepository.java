@@ -17,7 +17,7 @@ public class UserRepository {
     }
 
     public IUser getValidUser() {
-        return new User.UserBuilder()
+        return new UserBuilder()
                 .setEmail(rb.getString("email"))
                 .setPassword(rb.getString("password"))
                 .build();

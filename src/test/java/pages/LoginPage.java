@@ -15,36 +15,37 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
-        this.emailField = driver.findElement(By.id("Email"));
-        this.nextButton = driver.findElement(By.id("next"));
+        emailField = driver.findElement(By.id("Email"));
+        nextButton = driver.findElement(By.id("next"));
     }
     // Get Elements
 
     public WebElement getEmailField() {
-        return this.emailField;
+        return emailField;
     }
 
     public WebElement getNextButton() {
-        return this.nextButton;
+        return nextButton;
     }
 
     // Set Data
     public void setEmailField(String searchText) {
-        this.emailField.sendKeys(searchText);
+        emailField.sendKeys(searchText);
     }
 
     public void clearEmailField() {
-        this.emailField.clear();
+        emailField.clear();
     }
 
     public void clickEmailField() {
-        this.emailField.click();
+        emailField.click();
     }
 
     public void clickNextButton() {
-        this.nextButton.click();
+        nextButton.click();
         //return new PasswordPage(driver);
     }
+
     public PasswordPage setEmail(IUser user) {
         clickEmailField();
         clearEmailField();

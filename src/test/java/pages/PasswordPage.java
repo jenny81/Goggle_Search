@@ -15,40 +15,40 @@ public class PasswordPage {
 
     public PasswordPage(WebDriver driver) {
         this.driver = driver;
-        this.passwordField = driver.findElement(By.id("Passwd"));
-        this.signInButton = driver.findElement(By.id("signIn"));
+        passwordField = driver.findElement(By.id("Passwd"));
+        signInButton = driver.findElement(By.id("signIn"));
     }
     // Get Elements
 
-    public WebElement getPasswordield() {
-        return this.passwordField;
+    public WebElement getPasswordField() {
+        return passwordField;
     }
 
     public WebElement getSignIn() {
-        return this.signInButton;
+        return signInButton;
     }
 
     // Set Data
-    public void setPasswordield(String searchText) {
-        this.passwordField.sendKeys(searchText);
+    public void setPasswordField(String searchText) {
+        passwordField.sendKeys(searchText);
     }
 
-    public void clearPasswordield() {
-        this.passwordField.clear();
+    public void clearPasswordField() {
+        passwordField.clear();
     }
 
-    public void clickPasswordield() {
-        this.passwordField.click();
+    public void clickPasswordField() {
+        passwordField.click();
     }
 
     public void clickSignInButton() {
-        this.signInButton.click();
+        signInButton.click();
     }
 
     public EmailPage setPassword(IUser user) {
-        clickPasswordield();
-        clearPasswordield();
-        setPasswordield(user.getPassword());
+        clickPasswordField();
+        clearPasswordField();
+        setPasswordField(user.getPassword());
         clickSignInButton();
         return new EmailPage(driver);
     }

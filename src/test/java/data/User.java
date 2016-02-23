@@ -7,9 +7,9 @@ public class User implements IUser {
     private String email;
     private String password;
 
-    private User(UserBuilder userBuilder) {
-        this.email = userBuilder.email;
-        this.password = userBuilder.password;
+    public User(UserBuilder userBuilder) {
+        email = userBuilder.email;
+        password = userBuilder.password;
 
     }
 
@@ -21,24 +21,6 @@ public class User implements IUser {
         return password;
     }
 
-    public static class UserBuilder {
-        private String email;
-        private String password;
 
-        public UserBuilder setEmail(String email) {
-            this.email = email;
-            return this;
-        }
-
-        public UserBuilder setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-
-        public User build() {
-            return new User(this);
-        }
-
-    }
 }
 

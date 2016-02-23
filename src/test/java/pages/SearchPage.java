@@ -14,37 +14,37 @@ public class SearchPage {
 
     public SearchPage(WebDriver driver) {
         this.driver = driver;
-        this.searchField = driver.findElement(By.id("lst-ib"));
-        this.postBoxLink = driver.findElement(By.cssSelector("[class*='gb_P']"));
+        searchField = driver.findElement(By.id("lst-ib"));
+        postBoxLink = driver.findElement(By.cssSelector("[class*='gb_P']"));
     }
 
     // Get Elements
 
     public WebElement getSearchField() {
-        return this.searchField;
+        return searchField;
     }
 
     public WebElement getPostBoxLink() {
-        return this.postBoxLink;
+        return postBoxLink;
     }
 
 
     // Set Data
 
     public void setSearchField(String word) {
-        this.searchField.sendKeys(word);
+        searchField.sendKeys(word);
     }
 
     public void clearSearchField() {
-        this.searchField.clear();
+        searchField.clear();
     }
 
     public void clickSearchField() {
-        this.searchField.click();
+        searchField.click();
     }
 
     public LoginPage clickPostBoxLink() {
-        this.postBoxLink.click();
+        postBoxLink.click();
         return new LoginPage(driver);
     }
 

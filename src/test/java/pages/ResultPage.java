@@ -19,8 +19,8 @@ public class ResultPage {
 
     public ResultPage(WebDriver driver) {
         this.driver = driver;
-        this.submitButton = driver.findElement(By.cssSelector("[name*='btnG']"));
-        this.searchField = driver.findElement(By.id("lst-ib"));
+        submitButton = driver.findElement(By.cssSelector("[name*='btnG']"));
+        searchField = driver.findElement(By.id("lst-ib"));
         //content = driver.findElements(By.partialLinkText("doc"));
         //content = driver.findElements(By.cssSelector("[h3 class*='r']"));wrong
         content = driver.findElements(By.cssSelector("h3.r"));
@@ -29,29 +29,29 @@ public class ResultPage {
 
     // Get Elements
     public WebElement getSubmitButton() {
-        return this.submitButton;
+        return submitButton;
     }
 
     public WebElement getSearchField() {
-        return this.searchField;
+        return searchField;
     }
 
     // Set Data
 
     public void setSearchField(String word) {
-        this.searchField.sendKeys(word);
+        searchField.sendKeys(word);
     }
 
     public void clearSearchField() {
-        this.searchField.clear();
+        searchField.clear();
     }
 
     public void clickSearchField() {
-        this.searchField.click();
+        searchField.click();
     }
 
     public ResultPage clickSubmitButton() {
-        this.submitButton.click();
+        submitButton.click();
         return new ResultPage(driver);
     }
 
