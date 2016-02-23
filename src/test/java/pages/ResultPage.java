@@ -12,22 +12,24 @@ import java.util.List;
  */
 public class ResultPage {
     private WebDriver driver;
-    private WebElement submit;
+    private WebElement submitButton;
     private WebElement searchField;
     private List<WebElement> content;
 
 
     public ResultPage(WebDriver driver) {
         this.driver = driver;
-        this.submit = driver.findElement(By.cssSelector("[name*='btnG']"));
+        this.submitButton = driver.findElement(By.cssSelector("[name*='btnG']"));
         this.searchField = driver.findElement(By.id("lst-ib"));
-        content = driver.findElements(By.partialLinkText("doc"));
+        //content = driver.findElements(By.partialLinkText("doc"));
+        //content = driver.findElements(By.cssSelector("[h3 class*='r']"));wrong
+        content = driver.findElements(By.cssSelector("h3.r"));
 
     }
 
     // Get Elements
-    public WebElement getSubmit() {
-        return this.submit;
+    public WebElement getSubmitButton() {
+        return this.submitButton;
     }
 
     public WebElement getSearchField() {
@@ -48,8 +50,8 @@ public class ResultPage {
         this.searchField.click();
     }
 
-    public ResultPage clickSubmit() {
-        this.submit.click();
+    public ResultPage clickSubmitButton() {
+        this.submitButton.click();
         return new ResultPage(driver);
     }
 
@@ -63,9 +65,9 @@ public class ResultPage {
         List<String> links = new ArrayList<String>();
         for (WebElement doc : content) {
             if (content.size() >= 5) {
-                links.add(doc.getAttribute("href"));
-                System.out.println(doc.getAttribute("href"));
-                System.out.println(doc.getText().toLowerCase());
+                links.add(doc.getText());
+                System.out.println(doc.getText());
+
             }
         }
         return links;

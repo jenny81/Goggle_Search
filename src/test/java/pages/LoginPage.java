@@ -1,5 +1,6 @@
 package pages;
 
+import data.IUser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,12 +11,12 @@ import org.openqa.selenium.WebElement;
 public class LoginPage {
     private WebDriver driver;
     private WebElement emailField;
-    private WebElement next;
+    private WebElement nextButton;
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         this.emailField = driver.findElement(By.id("Email"));
-        this.next = driver.findElement(By.id("next"));
+        this.nextButton = driver.findElement(By.id("next"));
     }
     // Get Elements
 
@@ -23,8 +24,8 @@ public class LoginPage {
         return this.emailField;
     }
 
-    public WebElement getNext() {
-        return this.next;
+    public WebElement getNextButton() {
+        return this.nextButton;
     }
 
     // Set Data
@@ -40,15 +41,15 @@ public class LoginPage {
         this.emailField.click();
     }
 
-    public void clickNext() {
-        this.next.click();
+    public void clickNextButton() {
+        this.nextButton.click();
         //return new PasswordPage(driver);
     }
     public PasswordPage setEmail(IUser user) {
         clickEmailField();
         clearEmailField();
         setEmailField(user.getEmail());
-        clickNext();
+        clickNextButton();
         return new PasswordPage(driver);
     }
 

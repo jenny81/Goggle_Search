@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="tests.TestSearchWord" duration-ms="41327" started-at="2016-02-23T14:14:02Z" finished-at="2016-02-23T14:14:44Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="41327" started-at="2016-02-23T14:14:02Z" finished-at="2016-02-23T14:14:44Z">
+      <class name="tests.TestSearchWord">
+        <test-method status="PASS" signature="testSearchWords(java.lang.String)[pri:1, instance:tests.TestSearchWord@2d3fcdbd]" name="testSearchWords" duration-ms="22945" started-at="2016-02-23T16:14:02Z" data-provider="word" finished-at="2016-02-23T16:14:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dog]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchWords -->
+        <test-method status="PASS" signature="word()[pri:0, instance:tests.TestSearchWord@2d3fcdbd]" name="word" is-config="true" duration-ms="0" started-at="2016-02-23T16:14:25Z" finished-at="2016-02-23T16:14:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- word -->
+        <test-method status="PASS" signature="testSearchOfLetters(data.IUser)[pri:2, instance:tests.TestSearchWord@2d3fcdbd]" name="testSearchOfLetters" duration-ms="18361" started-at="2016-02-23T16:14:25Z" data-provider="validUser" finished-at="2016-02-23T16:14:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data.User@74f6c5d8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchOfLetters -->
+        <test-method status="PASS" signature="word()[pri:0, instance:tests.TestSearchWord@2d3fcdbd]" name="word" is-config="true" duration-ms="0" started-at="2016-02-23T16:14:44Z" finished-at="2016-02-23T16:14:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- word -->
+        <test-method status="PASS" signature="word()[pri:0, instance:tests.TestSearchWord@2d3fcdbd]" name="word" is-config="true" duration-ms="0" started-at="2016-02-23T16:14:44Z" finished-at="2016-02-23T16:14:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- word -->
+      </class> <!-- tests.TestSearchWord -->
+    </test> <!-- Command line test -->
+  </suite> <!-- tests.TestSearchWord -->
+</testng-results>

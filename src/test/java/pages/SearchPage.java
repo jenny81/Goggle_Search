@@ -10,12 +10,12 @@ import org.openqa.selenium.WebElement;
 public class SearchPage {
     private WebDriver driver;
     private WebElement searchField;
-    private WebElement gmail;
+    private WebElement postBoxLink;
 
     public SearchPage(WebDriver driver) {
         this.driver = driver;
         this.searchField = driver.findElement(By.id("lst-ib"));
-        this.gmail = driver.findElement(By.cssSelector("[class*='gb_P']"));
+        this.postBoxLink = driver.findElement(By.cssSelector("[class*='gb_P']"));
     }
 
     // Get Elements
@@ -24,8 +24,8 @@ public class SearchPage {
         return this.searchField;
     }
 
-    public WebElement getGmail() {
-        return this.gmail;
+    public WebElement getPostBoxLink() {
+        return this.postBoxLink;
     }
 
 
@@ -43,8 +43,8 @@ public class SearchPage {
         this.searchField.click();
     }
 
-    public LoginPage clickGmail() {
-        this.gmail.click();
+    public LoginPage clickPostBoxLink() {
+        this.postBoxLink.click();
         return new LoginPage(driver);
     }
 
