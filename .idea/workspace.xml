@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f89ce20-0487-4030-96be-9e5ecc5ff3cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/TestSearch.java" afterPath="$PROJECT_DIR$/src/test/java/tests/TestSearch.java" />
+      <change type="DELETED" beforePath="C:\projects\workspace\tutorial\TestLogs.log" afterPath="" />
+      <change type="DELETED" beforePath="C:\projects\workspace\tutorial\tutorial.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/users.properties" afterPath="$PROJECT_DIR$/src/test/resources/users.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tutorial.iws" />
@@ -26,10 +28,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestSearch.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="users.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/users.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.030630631">
+              <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestSearch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26486486">
+            <state vertical-scroll-proportion="0.0">
               <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -103,7 +115,6 @@
         <option value="$PROJECT_DIR$/src/test/java/pages/SearchPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/PasswordPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/data/User.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/users.properties" />
         <option value="$PROJECT_DIR$/src/test/java/data/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/test/java/data/UserBuilder.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -113,6 +124,7 @@
         <option value="$PROJECT_DIR$/src/test/java/pages/EmailPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/TestSearchWord.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/TestSearch.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/users.properties" />
       </list>
     </option>
   </component>
@@ -796,7 +808,7 @@
       <workItem from="1456139261864" duration="14043000" />
       <workItem from="1456229380565" duration="11222000" />
       <workItem from="1456337826083" duration="2585000" />
-      <workItem from="1456388949764" duration="3966000" />
+      <workItem from="1456388949764" duration="4657000" />
     </task>
     <task id="LOCAL-00001" summary="Add log4j, slf4j to Pom.xml, Rename TestSearch class, add logs and assertions to TestSearch">
       <created>1456392615942</created>
@@ -804,15 +816,21 @@
       <option name="project" value="LOCAL" />
       <updated>1456392615942</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add comments, @AfterMetod, @AfterClass to testSearch">
+      <created>1456393038225</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1456393038225</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59286000" />
+    <option name="totallyTimeSpent" value="59977000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -820,7 +838,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294621" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -875,7 +893,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add log4j, slf4j to Pom.xml, Rename TestSearch class, add logs and assertions to TestSearch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add log4j, slf4j to Pom.xml, Rename TestSearch class, add logs and assertions to TestSearch" />
+    <MESSAGE value="Add comments, @AfterMetod, @AfterClass to testSearch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add comments, @AfterMetod, @AfterClass to testSearch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1183,14 +1202,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/users.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/data/UserBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44470868">
@@ -1254,7 +1265,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/TestSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26486486">
+        <state vertical-scroll-proportion="0.0">
           <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1263,6 +1274,14 @@
             <element signature="e#589#590#0" expanded="true" />
             <element signature="e#627#628#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/users.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.030630631">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
