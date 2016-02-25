@@ -20,14 +20,14 @@ public class TestSearch {
     //private WebDriver driver;
 
     @AfterMethod
-//    public void tearDown() {
-//        StartPage.get().logout();
-//    }
+    public void tearDown() {
+        StartPage.get().logout();
+    }
 
     @AfterClass
-    //public void oneTimeTearDown() {
-//        StartPage.get().quit();
-//    }
+    public void oneTimeTearDown() {
+        StartPage.get().quit();
+    }
 
     @DataProvider
     public Object[][] word() {
@@ -36,10 +36,12 @@ public class TestSearch {
 
     @Test(priority = 1, dataProvider = "word")
     public void testSearchWords(String word) throws Exception {
+        //Test steps
         ResultPage resultPage = StartPage.get().load().setSearchData(word);
         resultPage = resultPage.clickSubmitButton();
-        // create list of found items
+        // Creating list of found items
         List dataFromPage = resultPage.parseResultPage();
+        //Checking
         Assert.assertTrue(dataFromPage.size()>=5);
     }
 
@@ -52,9 +54,12 @@ public class TestSearch {
 
     @Test(priority = 2, dataProvider = "validUser")
     public void testSearchOfLetters(User validUser) throws Exception {
+        //Test steps
         EmailPage emailPage = StartPage.get().load().clickPostBoxLink().setEmail(UserRepository.get().getValidUser())
                 .setPassword(UserRepository.get().getValidUser());
+        // Creating list of found items
         List dataFromEmailPage = emailPage.parseEmailPage();
+        //Checking
         Assert.assertTrue(dataFromEmailPage.size()>=5);
     }
 
