@@ -19,6 +19,18 @@ import java.util.List;
 public class TestSearch {
     //private WebDriver driver;
 
+    @DataProvider
+    public Object[][] word() {
+        return new Object[][]{new Object[]{"dog"}};
+    }
+
+    @DataProvider
+    public Object[][] validUser() {
+        return new Object[][]{
+                {UserRepository.get().getValidUser()}
+        };
+    }
+
     @AfterMethod
     public void tearDown() {
         StartPage.get().logout();
@@ -29,11 +41,6 @@ public class TestSearch {
         StartPage.get().quit();
     }
 
-    @DataProvider
-    public Object[][] word() {
-        return new Object[][]{new Object[]{"dog"}};
-    }
-
     @Test(priority = 1, dataProvider = "word")
     public void testSearchWords(String word) throws Exception {
         //Test steps
@@ -42,15 +49,9 @@ public class TestSearch {
         // Creating list of found items
         List dataFromPage = resultPage.parseResultPage();
         //Checking
-        Assert.assertTrue(dataFromPage.size()>=5);
+        Assert.assertTrue(dataFromPage.size() >= 5);
     }
 
-    @DataProvider
-    public Object[][] validUser() {
-        return new Object[][]{
-                {UserRepository.get().getValidUser()}
-        };
-    }
 
     @Test(priority = 2, dataProvider = "validUser")
     public void testSearchOfLetters(User validUser) throws Exception {
@@ -60,7 +61,7 @@ public class TestSearch {
         // Creating list of found items
         List dataFromEmailPage = emailPage.parseEmailPage();
         //Checking
-        Assert.assertTrue(dataFromEmailPage.size()>=5);
+        Assert.assertTrue(dataFromEmailPage.size() >= 5);
     }
 
 }
