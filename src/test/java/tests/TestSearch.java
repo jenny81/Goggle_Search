@@ -2,6 +2,7 @@ package tests;
 
 import data.User;
 import data.UserRepository;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
@@ -15,7 +16,7 @@ import java.util.List;
 /**
  * Created by Admin on 19-Feb-16.
  */
-public class TestSearchWord {
+public class TestSearch {
     //private WebDriver driver;
 
     @AfterMethod
@@ -39,8 +40,7 @@ public class TestSearchWord {
         resultPage = resultPage.clickSubmitButton();
         // create list of found items
         List dataFromPage = resultPage.parseResultPage();
-        //System.out.println(dataFromPage);
-
+        Assert.assertTrue(dataFromPage.size()>=5);
     }
 
     @DataProvider
@@ -55,6 +55,7 @@ public class TestSearchWord {
         EmailPage emailPage = StartPage.get().load().clickPostBoxLink().setEmail(UserRepository.get().getValidUser())
                 .setPassword(UserRepository.get().getValidUser());
         List dataFromEmailPage = emailPage.parseEmailPage();
+        Assert.assertTrue(dataFromEmailPage.size()>=5);
     }
 
 }

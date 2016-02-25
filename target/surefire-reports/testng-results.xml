@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="tests.TestSearchWord" duration-ms="41327" started-at="2016-02-23T14:14:02Z" finished-at="2016-02-23T14:14:44Z">
+  <suite name="Command line suite" duration-ms="47293" started-at="2016-02-24T18:20:34Z" finished-at="2016-02-24T18:21:21Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="41327" started-at="2016-02-23T14:14:02Z" finished-at="2016-02-23T14:14:44Z">
+    <test name="Command line test" duration-ms="47293" started-at="2016-02-24T18:20:34Z" finished-at="2016-02-24T18:21:21Z">
       <class name="tests.TestSearchWord">
-        <test-method status="PASS" signature="testSearchWords(java.lang.String)[pri:1, instance:tests.TestSearchWord@2d3fcdbd]" name="testSearchWords" duration-ms="22945" started-at="2016-02-23T16:14:02Z" data-provider="word" finished-at="2016-02-23T16:14:25Z">
+        <test-method status="PASS" signature="testSearchWords(java.lang.String)[pri:1, instance:tests.TestSearchWord@2c9f9fb0]" name="testSearchWords" duration-ms="26432" started-at="2016-02-24T20:20:34Z" data-provider="word" finished-at="2016-02-24T20:21:01Z">
           <params>
             <param index="0">
               <value>
@@ -18,30 +18,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchWords -->
-        <test-method status="PASS" signature="word()[pri:0, instance:tests.TestSearchWord@2d3fcdbd]" name="word" is-config="true" duration-ms="0" started-at="2016-02-23T16:14:25Z" finished-at="2016-02-23T16:14:25Z">
+        <test-method status="PASS" signature="word()[pri:0, instance:tests.TestSearchWord@2c9f9fb0]" name="word" is-config="true" duration-ms="0" started-at="2016-02-24T20:21:01Z" finished-at="2016-02-24T20:21:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- word -->
-        <test-method status="PASS" signature="testSearchOfLetters(data.IUser)[pri:2, instance:tests.TestSearchWord@2d3fcdbd]" name="testSearchOfLetters" duration-ms="18361" started-at="2016-02-23T16:14:25Z" data-provider="validUser" finished-at="2016-02-23T16:14:44Z">
+        <test-method status="PASS" signature="testSearchOfLetters(data.User)[pri:2, instance:tests.TestSearchWord@2c9f9fb0]" name="testSearchOfLetters" duration-ms="20846" started-at="2016-02-24T20:21:01Z" data-provider="validUser" finished-at="2016-02-24T20:21:21Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[data.User@74f6c5d8]]>
+                <![CDATA[data.UserImpl@7ba8c737]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchOfLetters -->
-        <test-method status="PASS" signature="word()[pri:0, instance:tests.TestSearchWord@2d3fcdbd]" name="word" is-config="true" duration-ms="0" started-at="2016-02-23T16:14:44Z" finished-at="2016-02-23T16:14:44Z">
+        <test-method status="PASS" signature="word()[pri:0, instance:tests.TestSearchWord@2c9f9fb0]" name="word" is-config="true" duration-ms="0" started-at="2016-02-24T20:21:21Z" finished-at="2016-02-24T20:21:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- word -->
-        <test-method status="PASS" signature="word()[pri:0, instance:tests.TestSearchWord@2d3fcdbd]" name="word" is-config="true" duration-ms="0" started-at="2016-02-23T16:14:44Z" finished-at="2016-02-23T16:14:44Z">
+        <test-method status="PASS" signature="word()[pri:0, instance:tests.TestSearchWord@2c9f9fb0]" name="word" is-config="true" duration-ms="0" started-at="2016-02-24T20:21:21Z" finished-at="2016-02-24T20:21:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- word -->
       </class> <!-- tests.TestSearchWord -->
     </test> <!-- Command line test -->
-  </suite> <!-- tests.TestSearchWord -->
+  </suite> <!-- Command line suite -->
 </testng-results>

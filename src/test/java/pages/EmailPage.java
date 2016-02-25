@@ -1,5 +1,6 @@
 package pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +13,7 @@ import java.util.List;
  */
 public class EmailPage {
     private WebDriver driver;
+    private static final Logger log = Logger.getLogger(EmailPage.class);
     private List<WebElement> content;
 
     public EmailPage(WebDriver driver) {
@@ -25,8 +27,8 @@ public class EmailPage {
         for (WebElement doc : content) {
             if (content.size() >= 5) {
                 letters.add(doc.getText());
-                //System.out.println(doc.getAttribute("value"));
-                System.out.println(doc.getText());
+                log.info(doc.getText());
+                //System.out.println(doc.getText());
             }
         }
         return letters;

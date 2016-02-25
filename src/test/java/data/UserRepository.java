@@ -7,7 +7,7 @@ import java.util.ResourceBundle;
  */
 public class UserRepository {
     ResourceBundle rb = ResourceBundle.getBundle("users");
-    private static volatile UserRepository instance = new UserRepository();
+    private static UserRepository instance = new UserRepository();
 
     private UserRepository() {
     }

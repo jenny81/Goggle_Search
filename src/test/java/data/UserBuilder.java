@@ -16,7 +16,6 @@ public class UserBuilder {
         this.password = password;
         return this;
     }
-
     public UserImpl build() {
         return new UserImpl(this);
     }

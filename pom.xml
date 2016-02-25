@@ -15,6 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <org.testng.version>6.9.9</org.testng.version>
         <org.seleniumhq.version>2.48.2</org.seleniumhq.version>
+        <org.slf4j.version>1.7.13</org.slf4j.version>
         <testng.reports.directory>./target/surefire-reports/test-output</testng.reports.directory>
     </properties>
 
@@ -29,6 +30,19 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-server</artifactId>
             <version>${org.seleniumhq.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${org.slf4j.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${org.slf4j.version}</version>
+            <scope>runtime</scope>
         </dependency>
 
     </dependencies>
@@ -54,17 +68,17 @@
                 </configuration>
             </plugin>
 
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-surefire-plugin</artifactId>-->
-                <!--<version>2.19</version>-->
-                <!--<configuration>-->
-                    <!--<suiteXmlFiles>-->
-                        <!--<suiteXmlFile>testng.xml</suiteXmlFile>-->
-                    <!--</suiteXmlFiles>-->
-                    <!--<reportsDirectory>${testng.reports.directory}</reportsDirectory>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <reportsDirectory>${testng.reports.directory}</reportsDirectory>
+                </configuration>
+            </plugin>
 
         </plugins>
     </build>
