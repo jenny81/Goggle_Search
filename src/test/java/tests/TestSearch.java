@@ -44,24 +44,23 @@ public class TestSearch {
     @Test(priority = 1, dataProvider = "word")
     public void testSearchWords(String word) throws Exception {
         //Test steps
-        ResultPage resultPage = StartPage.get().load().setSearchData(word);
-        resultPage = resultPage.clickSubmitButton();
+        ResultPage resultPage = StartPage.get().load().setSearchData(word).clickSubmitButton();
         // Creating list of found items
-        List dataFromPage = resultPage.parseResultPage();
+        List dataFromPageList = resultPage.parseResultPage();
         //Checking
-        Assert.assertTrue(dataFromPage.size() >= 5);
+        Assert.assertTrue(dataFromPageList.size() >= 5);
     }
 
 
     @Test(priority = 2, dataProvider = "validUser")
-    public void testSearchOfLetters(User validUser) throws Exception {
+    public void testShowLettersList(User validUser) throws Exception {
+        //Preconditions
+        EmailPage emailPage = StartPage.get().load().clickPostBoxLink().setEmail(validUser)
+                .setPassword(validUser);
         //Test steps
-        EmailPage emailPage = StartPage.get().load().clickPostBoxLink().setEmail(UserRepository.get().getValidUser())
-                .setPassword(UserRepository.get().getValidUser());
-        // Creating list of found items
-        List dataFromEmailPage = emailPage.parseEmailPage();
+        List EmailsList = emailPage.parseEmailPage();
         //Checking
-        Assert.assertTrue(dataFromEmailPage.size() >= 5);
+        Assert.assertTrue(EmailsList.size() >= 5);
     }
 
 }
