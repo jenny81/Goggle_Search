@@ -16,10 +16,24 @@ public class UserRepository {
         return instance;
     }
 
-    public User getValidUser() {
+    public User getValidGoogleUser() {
         return new UserBuilder()
-                .setEmail(rb.getString("email"))
-                .setPassword(rb.getString("password"))
+                .setEmail(rb.getString("googleEmail"))
+                .setPassword(rb.getString("googlePassword"))
+                .build();
+    }
+
+    public User getValidYahooUser() {
+        return new UserBuilder()
+                .setEmail(rb.getString("yahooEmail"))
+                .setPassword(rb.getString("yahooPassword"))
+                .build();
+    }
+
+    public User getValidRamblerUser() {
+        return new UserBuilder()
+                .setEmail(rb.getString("ramblerEmail"))
+                .setPassword(rb.getString("ramblerPassword"))
                 .build();
     }
 }

@@ -11,30 +11,30 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by Admin on 22-Feb-16.
  */
-public class StartPage {
+public class GoogleStartPage {
     private List<WebDriver> driverList = new ArrayList<WebDriver>();
     ResourceBundle rb = ResourceBundle.getBundle("users");
-    private static StartPage instance = new StartPage();
+    private static GoogleStartPage instance = new GoogleStartPage();
 
-    private StartPage() {
+    private GoogleStartPage() {
 
     }
 
-    public static StartPage get() {
+    public static GoogleStartPage get() {
         return instance;
     }
 
-    public SearchPage load() {
+    public GoogleSearchPage load() {
         WebDriver driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driverList.add(driver);
-        driver.get(rb.getString("url"));
-        return new SearchPage(driver);
+        driver.get(rb.getString("google"));
+        return new GoogleSearchPage(driver);
     }
 
-    public SearchPage logout() {
-        driverList.get(0).get(rb.getString("url"));
-        return new SearchPage(driverList.get(0));
+    public GoogleSearchPage logout() {
+        driverList.get(0).get(rb.getString("google"));
+        return new GoogleSearchPage(driverList.get(0));
     }
 
 
@@ -43,6 +43,7 @@ public class StartPage {
             driver.quit();
         }
     }
+
 
 }
 

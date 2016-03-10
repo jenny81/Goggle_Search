@@ -8,12 +8,12 @@ import org.openqa.selenium.WebElement;
 /**
  * Created by Admin on 20-Feb-16.
  */
-public class PasswordPage {
+public class GooglePasswordPage {
     private WebDriver driver;
     private WebElement passwordField;
     private WebElement signInButton;
 
-    public PasswordPage(WebDriver driver) {
+    public GooglePasswordPage(WebDriver driver) {
         this.driver = driver;
         passwordField = driver.findElement(By.id("Passwd"));
         signInButton = driver.findElement(By.id("signIn"));
@@ -45,11 +45,11 @@ public class PasswordPage {
         signInButton.click();
     }
 
-    public EmailPage setPassword(User user) {
+    public GoogleEmailPage setPassword(User user) {
         clickPasswordField();
         clearPasswordField();
         setPasswordField(user.getPassword());
         clickSignInButton();
-        return new EmailPage(driver);
+        return new GoogleEmailPage(driver);
     }
 }

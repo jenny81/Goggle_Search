@@ -11,12 +11,12 @@ import java.util.List;
 /**
  * Created by Admin on 20-Feb-16.
  */
-public class EmailPage {
+public class GoogleEmailPage {
     private WebDriver driver;
-    private static final Logger log = Logger.getLogger(EmailPage.class);
+    private static final Logger log = Logger.getLogger(GoogleEmailPage.class);
     private List<WebElement> content;
 
-    public EmailPage(WebDriver driver) {
+    public GoogleEmailPage(WebDriver driver) {
         this.driver = driver;
         content = driver.findElements(By.cssSelector("[class*='yX xY ']"));
 

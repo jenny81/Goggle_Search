@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,20 +43,20 @@ public class AppTest {
         }
     }
 
-   // @Test(priority = 2)
+    @Test(priority = 2)
     public void testSearchOfLetters() throws Exception {
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.get("https://www.google.com.ua/?gws_rd=ssl");
-        driver.findElement(By.cssSelector("[class*='gb_P']")).click();
-        driver.findElement(By.id("Email")).sendKeys("jenny.yud81@gmail.com");
-        driver.findElement(By.id("next")).click();
-        driver.findElement(By.id("Passwd")).sendKeys("8bv4gf2tr");
-        driver.findElement(By.id("signIn")).click();
+        driver.get("https://www.yahoo.com/");
+        driver.findElement(By.id("uh-mail-link")).click();
+        driver.findElement(By.id("login-username")).sendKeys("yevheniya.yudenkova@yahoo.com");
+        driver.findElement(By.id("login-signin")).click();
+        driver.findElement(By.id("login-passwd")).sendKeys("8bv4gf2tr");
+        driver.findElement(By.id("login-signin")).click();
 
         //(
 //
-        List<WebElement> docs = driver.findElements(By.cssSelector("[class*='yX xY ']"));
+        List<WebElement> docs = driver.findElements(By.cssSelector("[class*='from bold']"));
         List<String> letters = new ArrayList<>();
         for (WebElement doc : docs) {
             if (docs.size() >= 5) {
@@ -65,8 +66,20 @@ public class AppTest {
 
                 //Assert.assertEquals("Увійти", driver.findElement(By.linkText("Увійти")).getText());
             }
-            System.out.println(letters);
 
-        }}}
+        }
+    }
+
+    @Test(priority = 3)
+    public void testGetRamblerLettersList() throws Exception {
+        driver = new FirefoxDriver();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.get("https://www.rambler.ru/");
+        driver.findElement(By.linkText("Почта")).click();
+        //driver.findElement(By.className("form-input__wrap form-input__wrap_login"));
+        driver.findElement(By.xpath("//input[@type='text']")).sendKeys("jenny.yu");
+        driver.findElement(By.id("form_password")).sendKeys("8Bv4Gf2Tr");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+}}
 
 
